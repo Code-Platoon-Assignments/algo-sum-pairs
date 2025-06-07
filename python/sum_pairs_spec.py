@@ -1,3 +1,11 @@
 from sum_pairs import sum_pairs
+import pytest
 
-# write your specs here!
+def test_01_4_5_9():
+    assert sum_pairs([1,2,3,4,5], 9) == [[4,5]]
+
+def test_02_multiple_7():
+    assert sum_pairs([1,2,3,4,5], 7) == [[3,4], [2,5]]
+
+def test_03_unable_to_find():
+    assert sum_pairs([3, 1, 5, 8, 2], 27) == 'unable to find pairs'
